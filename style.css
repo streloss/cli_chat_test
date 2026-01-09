@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #0d0d0d;
+    font-family: "Courier New", monospace;
+    color: #00ff90;
+}
+
+/* ===== TERMINAL ===== */
+.terminal {
+    width: 100%;
+    height: 100dvh; /* корректно работает на мобилках */
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* ===== OUTPUT ===== */
+.output {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+    font-size: 15px;
+}
+
+.line {
+    margin: 4px 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.system {
+    color: #00bfff;
+}
+
+.user {
+    color: #00ff90;
+}
+
+.bot {
+    color: #ffaa00;
+}
+
+/* ===== INPUT ===== */
+.input-line {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #00ff90;
+    padding: 8px 4px;
+}
+
+.prompt {
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ff90;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 600px) {
+    .output {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    .prompt {
+        font-size: 20px;
+    }
+}
